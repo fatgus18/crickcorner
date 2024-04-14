@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  width: 90%; /* Adjusted width */
+  width: 90%; 
   margin: 0 auto;
 }
 
@@ -64,11 +64,11 @@ body {
 }
 
 .left {
-  flex-basis: 65%; /* Adjusted flex-basis */
+  flex-basis: 65%; 
 }
 
 .right {
-  flex-basis: 30%; /* Adjusted flex-basis */
+  flex-basis: 30%; 
 }
 
 /* Home Page Styles */
@@ -84,8 +84,6 @@ body {
 }
 
 /*Teams page Styles */
-/* Teams Page Styles */
-/* Teams Page Styles */
 .teams {
   text-align: center;
 }
@@ -216,14 +214,14 @@ body {
   color: #3498db;
   text-align: center;
   font-size: 24px;
-  font-weight: bold; /* Make the font more bold */
+  font-weight: bold; 
   margin-bottom: 20px;
 }
 
 .stats .player-of-the-tournament p {
   color: #2c3e50;
   font-size: 18px;
-  font-weight: bold; /* Make the font more bold */
+  font-weight: bold; 
   margin-bottom: 10px;
 }
 
@@ -231,10 +229,10 @@ body {
   display: block;
   margin: 0 auto 20px;
   border-radius: 50%;
-  width: 200px; /* Increase the image size */
-  height: 200px; /* Increase the image size */
+  width: 200px; 
+  height: 200px; 
   object-fit: cover;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
 }
 
 
@@ -260,7 +258,6 @@ footer {
   width: 100%;
 }
 
-/* Responsive Styles */
 @media screen and (max-width: 800px) {
   .content {
     flex-wrap: wrap;
