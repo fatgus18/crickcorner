@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CrickCorner</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .schedule {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .schedule th,
+        .schedule td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .schedule th {
+            background-color: #3498db;
+            color: #ffffff;
+        }
+
+        .schedule tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .schedule td:first-child {
+            font-weight: bold;
+        }
+
+        .schedule td:last-child {
+            text-align: right;
+        }
+
+        footer {
+            background-color: black;
+  color: #ffffff;
+  padding: 20px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  max-width: 1479px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+  }
+
+ .social-media a {
+    margin: 0 10px;
+  }
+
+  .social-media img {
+    width: 30px;
+    height: auto;
+  }
+
+  body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+
+        .content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .schedule img {
+            width: 50px; 
+            height: auto; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.png" alt="Cricket Tournament Logo">
+            <h1 style="font-family:verdana"><i>CrickCorner</i></h1>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="stats.html">Stats</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <table class="schedule">
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Venue</th>
+                    <th>Teams</th>
+                </tr>
+                <tr>
+                    <td>01/02/2024</td>
+                    <td>10:00 AM</td>
+                    <td>Eden Gardens, Kolkata</td>
+                    <td><img src="team1.jpg" alt="Team A Logo"> vs <img src="team2.jpg" alt="Team B Logo"></td>
+                </tr>
+                <tr>
+                    <td>01/02/2024</td>
+                    <td>02:00 PM</td>
+                    <td>Wankhede Stadium, Mumbai</td>
+                    <td><img src="team3.jpeg" alt="Team C Logo"> vs <img src="team4.jpeg" alt="Team D Logo"></td>
+                </tr>
+                <tr>
+                    <td>02/02/2024</td>
+                    <td>10:00 AM</td>
+                    <td>Feroz Shah Kotla, Delhi</td>
+                    <td><img src="team5.jpg" alt="Team E Logo"> vs <img src="team6.png" alt="Team F Logo"></td>
+                </tr>
+                <tr>
+                    <td>02/02/2024</td>
+                    <td>02:00 PM</td>
+                    <td>MA Chidambaram Stadium, Chennai</td>
+                    <td><img src="team7.jpeg" alt="Team G Logo"> vs <img src="team8.jpeg" alt="Team H Logo"></td>
+                </tr>
+                <tr>
+                    <td>03/02/2024</td>
+                    <td>10:00 AM</td>
+                    <td>M Chinnaswamy Stadium, Bangalore</td>
+                    <td><img src="team1.jpg" alt="Team A Logo"> vs <img src="team3.jpeg" alt="Team C Logo"></td>
+                </tr>
+                <tr>
+                    <td>03/02/2024</td>
+                    <td>02:00 PM</td>
+                    <td>Rajiv Gandhi International Cricket Stadium, Hyderabad</td>
+                    <td><img src="team2.jpg" alt="Team B Logo"> vs <img src="team4.jpeg" alt="Team D Logo"></td>
+                </tr>
+                <tr>
+                    <td>04/02/2024</td>
+                    <td>10:00 AM</td>
+                    <td>Holkar Cricket Stadium, Indore</td>
+                    <td><img src="team5.jpg" alt="Team E Logo"> vs <img src="team7.jpeg" alt="Team G Logo"></td>
+                </tr>
+                <tr>
+                    <td>04/02/2024</td>
+                    <td>02:00 PM</td>
+                    <td>Greenfield International Stadium, Thiruvananthapuram</td>
+                    <td><img src="team6.png" alt="Team F Logo"> vs <img src="team8.jpeg" alt="Team H Logo"></td>
+                </tr>
+                <tr>
+                    <td>05/02/2024</td>
+                    <td>10:00 AM</td>
+                    <td>Sardar Patel Stadium, Ahmedabad</td>
+                    <td><img src="team1.jpg" alt="Team A Logo"> vs <img src="team4.jpeg" alt="Team D Logo"></td>
+                </tr>
+                <tr>
+                    <td>05/02/2024</td>
+                    <td>02:00 PM</td>
+                    <td>Barabati Stadium, Cuttack</td>
+                    <td><img src="team2.jpg" alt="Team B Logo"> vs <img src="team3.jpeg" alt="Team C Logo"></td>
+                </tr>
+                <tr>
+                    <td>06/02/2024</td>
+                    <td>10:00 AM</td>
+                    <td>Himachal Pradesh Cricket Association Stadium, Dharamshala</td>
+                    <td><img src="team5.jpg" alt="Team E Logo"> vs <img src="team8.jpeg" alt="Team H Logo"></td>
+                </tr>
+                <tr>
+                    <td>06/02/2024</td>
+                    <td>02:00 PM</td>
+                    <td>Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam</td>
+                    <td><img src="team6.png" alt="Team F Logo"> vs <img src="team7.jpeg" alt="Team G Logo"></td>
+                </tr>
+                <tr>
+                    <td>07/02/2024</td>
+                    <td>10:00 AM</td>
+                    <td>Brabourne Stadium, Mumbai</td>
+                    <td>Semi-final 1</td>
+                </tr>
+                <tr>
+                    <td>07/02/2024</td>
+                    <td>02:00 PM</td>
+                    <td>Sawai Mansingh Stadium, Jaipur</td>
+                    <td>Semi-final 2</td>
+                </tr>
+                <tr>
+                    <td>08/02/2024</td>
+                    <td>02:00 PM</td>
+                    <td>Wankhede Stadium, Mumbai</td>
+                    <td>Final</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <p>© 2024 crickcorner.com Cricket Networks Limited. All rights reserved</p>
+        <p><a href="mailto:crickcorner@info.com">crickcorner@info.com</a></p>
+        <div class="social-media">
+          <a href="https://www.facebook.com/" target="_blank"><img src="facebook-logo.png" alt="Facebook Logo"></a>
+          <a href="https://www.twitter.com/" target="_blank"><img src="twitter-logo.png" alt="Twitter Logo"></a>
+          <a href="https://www.instagram.com/cricbuzzofficial/" target="_blank"><img src="instagram-logo.png" alt="Instagram Logo"></a>
+        </div>
+      </footer>
+</body>
+</html>

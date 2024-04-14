@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inter-School Cricket Tournament Registration</title>
+  <link rel="stylesheet" type="text/css" href="formstyles.css">
+</head>
+<body>
+  <div class="background-image"></div>
+  <div class="form-container">
+    <h2>Inter-School Cricket Tournament Registration Form</h2>
+
+    <form id="registrationForm">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" required><br><br>
+
+      <label for="teamSelection">Select Team:</label>
+      <select id="teamSelection">
+        <option value="Team A">Team A</option>
+        <option value="Team B">Team B</option>
+        <option value="Team C">Team C</option>
+        <option value="Team D">Team D</option>
+        <option value="Team E">Team E</option>
+        <option value="Team F">Team F</option>
+        <option value="Team G">Team G</option>
+        <option value="Team H">Team H</option>
+      </select><br><br>
+
+      <fieldset>
+        <legend>Upload Profile Picture (JPEG/JPG):</legend>
+        <input type="file" id="profilePicture" accept="image/jpeg, image/jpg">
+      </fieldset><br>
+
+      <button type="button" onclick="addPlayer()">Register (Add Player)</button>
+      <p>Add players and then submit all at once.</p>
+      <button type="button" onclick="submitRegistration()">Submit All Players</button>
+    </form>
+
+    <h2>Registered Players:</h2>
+    <table id="playersTable">
+      <tr>
+        <th>Team Name</th>
+        <th>Player Name</th>
+        <th>Profile Picture</th>
+      </tr>
+    </table>
+  </div>
+
+  <script src="teamData.js"></script> <script>
+    function addPlayer() {
+      var fullName = document.getElementById("fullName").value;
+      var teamSelection = document.getElementById("teamSelection").value;
+      var profilePicture = document.getElementById("profilePicture").files[0];
+
+      var table = document.getElementById("playersTable");
+      var row = table.insertRow(-1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+
+      cell1.innerHTML = teamSelection;
+      cell2.innerHTML = fullName;
+
+      if (profilePicture) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          var img = document.createElement("img");
+          img.src = e.target.result;
+          img.width = 50;
+          img.height =50; 
+          cell3.appendChild(img);
+        };
+        reader.readAsDataURL(profilePicture);
+      } else {
+        cell3.innerHTML = "No Picture";
+      }
+
+      addPlayerToTeam(teamSelection, fullName);
+    }
+
+    function submitRegistration() {
+      if (confirm("Are you sure you want to submit the above names?")) {
+        updateTeamPages();
+        window.location.href = "index.html";
+      }
+    }
+  </script>
+</body>
+</html>

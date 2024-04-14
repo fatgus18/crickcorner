@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="landingstyles.css">
+  <title>CrickCorner</title>
+</head>
+<body>
+  <div class="landing-page">
+    <div class="background-image"></div>
+    <div class="content">
+      <img src="logo.png" alt="Your Logo" class="logo">
+      <h1 id="typed-text"></h1>
+      <div class="options">
+        <a href="#" class="role" id="admin-role" onclick="showAdminForm()">
+          <img src="admin_login.png" alt="Admin Icon" class="icon">
+          <p class="label">ADMIN</p>
+        </a>
+        <a href="#" class="role" id="player-role" onclick="showPlayerForm()">
+          <img src="player_login.png" alt="Player Icon" class="icon">
+          <p class="label">PLAYER</p>
+        </a>
+      </div>
+      <div class="login-form" id="login-form">
+        <form action="form.html" id="admin-form" style="display: none;">
+          <input type="text" placeholder="Enter admin username" name="username" required>
+          <input type="password" placeholder="Enter admin password" name="password" required>
+          <button type="submit">Admin Login</button>
+        </form>
+        <form action="index.html" id="player-form" style="display: none;">
+          <input type="text" placeholder="Enter player username" name="username" required>
+          <input type="password" placeholder="Enter player password" name="password" required>
+          <button type="submit">Player Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="landingback.js"></script>
+</body>
+</html>

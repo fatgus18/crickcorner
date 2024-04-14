@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CrickCorner</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .header img {
+            width: 50px; 
+            height: auto; 
+            margin-right: 10px; 
+            float: left; 
+        }
+
+        body{
+            position: relative;
+        }
+
+        .news-container .news img{
+            width: 300px;
+            height: auto;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .news-container .news:nth-child(even) img {
+            float: right;
+            margin-left: 20px;
+            margin-right: 0;
+        }
+
+        .content{
+            padding: 10px;
+        }
+
+        .content .score-container .match{
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            width: 700px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container .left{
+            padding: 10px;
+        }
+
+        .content .right{
+            padding: 10px;            
+        }
+
+        .content .right .featured-videos{
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container .left .news-container .news{
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .featured-videos {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            width: 360px; 
+            margin: 0 auto; 
+        }
+
+        .players-in-focus {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .leaders {
+            width: 220px;
+            margin: 10px;
+        }
+
+        .orange-cap {
+            background: linear-gradient(to bottom, #FFA726, #FB8C00); 
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .purple-cap{
+            background: linear-gradient(to bottom, #8e24aa, #7b1fa2);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .orange-cap h3, .purple-cap h3 {
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .player-info {
+            text-align: center;
+        }
+
+        .player-info img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: black;
+            color: #ffffff;
+            padding: 20px;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            max-width: 1479px;
+            margin: 0 auto;
+            height: auto;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+        }
+
+        .social-media img {
+            width: 30px;
+            height: auto;
+        }
+
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none; 
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .profile-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .dropdown button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            padding: 10px;
+            display: inline-block; 
+            text-align: left;
+        }
+
+        .dropdown button:hover {
+            background-color: #f9f9f9;
+        }
+
+        dark-mode-toggle {
+            position: relative;
+            display: inline-block;
+            width: 40px; 
+            height: 20px; 
+            margin-top: 15px; 
+        }
+
+        .dark-mode-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+            height: 26px; 
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px; 
+            width: 20px; 
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+ /* Dark mode styles */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Define styles for specific elements with black text */
+.dark-mode .match p,
+.dark-mode .news p,
+.dark-mode .featured-videos p,
+.dark-mode .video-container p {
+    color: #000000; /* Set text color to black */
+}
+
+/* All other content will have white text color by default */
+.dark-mode .header img {
+    filter: invert(1);
+}
+
+.dark-mode .navbar {
+    background-color: #333333;
+}
+
+.dark-mode .navbar ul li a {
+    color: #ffffff;
+}
+
+.dark-mode .content {
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+.dark-mode .match,
+.dark-mode .featured-videos,
+.dark-mode .video-container,
+.dark-mode .players-in-focus,
+.dark-mode .leaders .orange-cap,
+.dark-mode .leaders .purple-cap {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.dark-mode .players-in-focus .player-info h3,
+.dark-mode footer {
+    color: #ffffff;
+}
+
+.dark-mode .social-media a img {
+    filter: invert(1);
+}
+
+.dark-mode #scrollUpBtn {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.dark-mode .profile-icon img {
+    filter: invert(1);
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.png" alt="Cricket Tournament Logo">
+            <h1 style="font-family:verdana"><i>CrickCorner</i></h1>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="stats.html">Stats</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left">
+                <h2>Live Scores</h2>
+                <div class="score-container">
+                    <div class="match">
+                        <p><strong>Team A vs Team B</strong> &nbsp; Team A 150/5 (20) &nbsp; Team B 120/7 (18) <br><strong>Status:</strong> Team A won by 30 runs</p>
+                    </div>
+                    <div class="match">
+                        <p><strong>Team C vs Team D</strong> &nbsp; Team C 180/4 (20) &nbsp; Team D 181/3 (19.2) <br><strong>Status:</strong> Team D won by 7 wickets</p>
+                    </div>
+                    <div class="match">
+                        <p><strong>Team E vs Team F</strong> &nbsp; Team E 200/3 (20) &nbsp; Team F 201/2 (18.4) <br><strong>Status:</strong> Team F won by 8 wickets</p>
+                    </div>
+                    <div class="match">
+                        <p><strong>Team G vs Team H</strong> &nbsp; Team G 170/6 (20) &nbsp; Team H 171/4 (19.1) <br><strong>Status:</strong> Team H won by 6 wickets</p>
+                    </div>
+                </div>
+                <h2>Latest News</h2>
+                <div class="news-container">
+                    <div class="news">
+                        <img src="cricket1.jpg" alt="Cricket Moment">
+                        <h3>Team F clinches the top spot in the points table</h3>
+                        <p>
+                            Team F continued their impressive run in the tournament by defeating Team E by 8 wickets in a high-scoring encounter. Chasing a mammoth target of 201, Team F rode on the brilliant knocks of their openers, who added 150 runs for the first wicket. Team E's bowlers had no answer to the onslaught and could only manage to take two wickets in the entire innings. Team F reached the target with 8 balls to spare and secured the top spot in the points table with 8 wins out of 10 matches.
+                        </p>
+                    </div>
+                    <div class="news">
+                        <img src="cricket2.jpg" alt="Cricket Moment">
+                        <h3>Team D pulls off a stunning chase against Team C</h3>
+                        <p>
+                            Team D pulled off a stunning chase against Team C in a nail-biting finish. Team C had posted a formidable total of 180/4, thanks to a century partnership between their middle-order batsmen. Team D's chase got off to a shaky start as they lost two early wickets. However, their captain and their wicket-keeper batsman steadied the ship and put on a match-winning stand of 120 runs. Team D needed 12 runs off the last over and they managed to get them with 4 balls remaining, thanks to some clever running and a couple of boundaries. Team D moved up to the second spot in the points table with 7 wins out of 10 matches.
+                        </p>
+                    </div>
+                    <div class="news">
+                        <img src="cricket4.jpg" alt="Cricket Moment">
+                        <h3>Team G's Bowlers Dominate in a Low-Scoring Thriller</h3>
+                        <p>
+                            In a thrilling encounter, Team G's bowlers displayed exceptional skills to defend a modest total against Team H. Opting to bat first, Team G struggled against the tight bowling attack of Team H and managed to post a total of 140/9 in their allotted 20 overs. However, their bowlers rose to the occasion and bowled with precision, restricting Team H to 135/8 in their chase. Team G's victory was largely attributed to the remarkable bowling performances, with their bowlers maintaining tight lines and picking up crucial wickets at regular intervals.
+                        </p>
+                    </div>
+                    <div class="news">
+                        <img src="cricket3.jpeg" alt="Cricket Moment">
+                        <h3>Team B Registers Record-Breaking Run Chase Against Team A</h3>
+                        <p>
+                            In a stunning display of batting prowess, Team B pulled off an extraordinary run chase against Team A. Chasing a daunting target of 200 runs, Team B's batsmen showcased exceptional skills and determination as they chased down the target with just one ball to spare. The highlight of the chase was a scintillating century by Team B's star batsman, who played a breathtaking innings under pressure. Team A's bowlers struggled to contain the aggressive batting display, as Team B scripted a memorable victory, marking one of the highest successful run chases in the tournament.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h2 align="center">Featured Videos</h2>
+                <div class="featured-videos">
+                    <div class="video-container">
+                        <video src="match2.mp4" controls width="300" height="200"></video>
+                        <p>Highlights of Team F vs Team E match</p>
+                    </div>
+                    <div class="video-container">
+                        <video src="interview1.mp4" controls width="300" height="200"></video>
+                        <p>Interview with Team C captain after hard fought loss</p>
+                    </div>
+                    <div class="video-container">
+                        <video src="potm.mp4" controls width="300" height="200"></video>
+                        <p>POTM innings highlights</p>
+                    </div>
+                    <div class="video-container">
+                        <video src="match1.mp4" controls width="300" height="200"></video>
+                        <p>Highlights of Team A vs Team C highlights</p>
+                    </div>
+                </div>
+                <div class="players-in-focus">
+                    <h2 align="center">Players in Focus</h2>
+                    <div class="leaders">
+                        <div class="orange-cap">
+                            <h3 align="center">Orange Cap</h3>
+                            <div class="player-info">
+                                <img class="center" src="orange.jpg" alt="Orange Cap Player">
+                                <h3 align="center"><a href="stats.html" style="text-decoration: none; color: #333;">Player Name</a></h3>
+                                <h4 align="center"><a href="teams.html" style="text-decoration: none; color: #666;">Team F</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leaders">
+                        <div class="purple-cap">
+                            <h3 align="center">Purple Cap</h3>
+                            <div class="player-info">
+                                <img class="center" src="purple.jpg" alt="Purple Cap Player">
+                                <h3 align="center"><a href="stats.html" style="text-decoration: none; color: #333;">Player Name</a></h3>
+                                <h4 align="center"><a href="teams.html" style="text-decoration: none; color: #666;">Team F</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <p>© 2024 crickcorner.com Cricket Networks Limited. All rights reserved</p>
+        <p><a href="mailto:crickcorner@info.com">crickcorner@info.com</a></p>
+        <div class="social-media">
+          <a href="https://www.facebook.com/" target="_blank"><img src="facebook-logo.png" alt="Facebook Logo"></a>
+          <a href="https://www.twitter.com/" target="_blank"><img src="twitter-logo.png" alt="Twitter Logo"></a>
+          <a href="https://www.instagram.com/cricbuzzofficial/" target="_blank"><img src="instagram-logo.png" alt="Instagram Logo"></a>
+        </div>
+    </footer>
+    <button id="scrollUpBtn" onclick="scrollToTop()">↑</button>
+    <div class="profile-icon" onclick="toggleDropdown()">
+        <img src="profile-icon.jpg" style="width: 60px; height: 60px;" alt="Profile Icon">
+        <div class="dropdown">
+            <input type="checkbox" id="darkModeToggle" class="dark-mode-toggle">
+            <label class="slider" for="darkModeToggle"></label>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            var scrollButton = document.getElementById("scrollUpBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollButton.style.display = "block";
+            } else {
+                scrollButton.style.display = "none";
+            }
+        }
+        
+        function scrollToTop() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0; 
+        }
+
+        function toggleDarkMode() {
+            var darkModeToggle = document.getElementById('darkModeToggle');
+            var body = document.body;
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+            }
+        }
+
+
+        document.getElementById('darkModeToggle').addEventListener('change', toggleDarkMode);
+
+        function toggleDropdown() {
+            var dropdown = document.querySelector('.dropdown');
+            dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function logout() {
+            window.location.href = "landing.html";
+        }
+    </script>
+</body>
+</html>

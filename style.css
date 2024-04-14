@@ -1,0 +1,285 @@
+/* General Styles for the Whole Website */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #34495e;
+  background-color: #ecf0f1;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%; /* Adjusted width */
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #2c3e50;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar a {
+  display: block;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #34495e;
+}
+
+/* Content Styles */
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.left {
+  flex-basis: 65%; /* Adjusted flex-basis */
+}
+
+.right {
+  flex-basis: 30%; /* Adjusted flex-basis */
+}
+
+/* Home Page Styles */
+.home h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.home p {
+  color: #7f8c8d;
+  text-align: justify;
+}
+
+/*Teams page Styles */
+/* Teams Page Styles */
+/* Teams Page Styles */
+.teams {
+  text-align: center;
+}
+
+.teams .team {
+  background-color: #ecf0f1;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  text-align: left; 
+}
+
+.teams img {
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+
+/* Schedule Page Styles */
+.schedule h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.schedule table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.schedule th,
+.schedule td {
+  padding: 15px;
+  border: 1px solid #bdc3c7;
+  text-align: left;
+}
+
+.schedule th {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.schedule tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.schedule td:first-child {
+  font-weight: bold;
+}
+
+.schedule td:last-child {
+  text-align: right;
+}
+
+/* Stats Page Styles */
+.stats h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.stats .points-table,
+.stats .leading-run-scorers,
+.stats .leading-wicket-takers {
+  background-color: #ecf0f1;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.stats table th,
+.stats table td {
+  padding: 15px;
+  border: 1px solid #bdc3c7;
+}
+
+.stats table th {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.stats table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.stats .player-of-the-tournament img {
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.index .content {
+  background-color: #f2f2f2;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.stats .player-of-the-tournament {
+  background-color: #ecf0f1;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stats .player-of-the-tournament h3 {
+  color: #3498db;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold; /* Make the font more bold */
+  margin-bottom: 20px;
+}
+
+.stats .player-of-the-tournament p {
+  color: #2c3e50;
+  font-size: 18px;
+  font-weight: bold; /* Make the font more bold */
+  margin-bottom: 10px;
+}
+
+.stats .player-of-the-tournament img {
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  width: 200px; /* Increase the image size */
+  height: 200px; /* Increase the image size */
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+
+/* About Page Styles */
+.about h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about p {
+  text-align: justify;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #34495e;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 800px) {
+  .content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .left,
+  .right {
+    flex-basis: 100%;
+  }
+
+  .right {
+    margin-top: 20px;
+  }
+}
+
+.header img {
+  width: 50px; 
+  height: auto; 
+  margin-right: 10px; 
+  float: left; 
+}

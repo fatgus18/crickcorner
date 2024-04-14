@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CrickCorner</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+    text-align: center;
+}
+
+.stats {
+    text-align: center; 
+}
+
+.stats table {
+    margin: 20px auto; 
+}
+
+
+.points-table,
+.leading-run-scorers,
+.leading-wicket-takers,
+.player-of-the-tournament {
+    margin-top: 20px;
+}
+
+.points-table table,
+.leading-run-scorers table,
+.leading-wicket-takers table,
+.player-of-the-tournament {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.points-table h3,
+.leading-run-scorers h3,
+.leading-wicket-takers h3,
+.player-of-the-tournament h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.points-table table,
+.leading-run-scorers table,
+.leading-wicket-takers table,
+.player-of-the-tournament table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.points-table th,
+.points-table td,
+.leading-run-scorers th,
+.leading-run-scorers td,
+.leading-wicket-takers th,
+.leading-wicket-takers td,
+.player-of-the-tournament th,
+.player-of-the-tournament td {
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+}
+
+.points-table th,
+.leading-run-scorers th,
+.leading-wicket-takers th,
+.player-of-the-tournament th {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.points-table tr:nth-child(even),
+.leading-run-scorers tr:nth-child(even),
+.leading-wicket-takers tr:nth-child(even),
+.player-of-the-tournament tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.points-table td:first-child,
+.leading-run-scorers td:first-child,
+.leading-wicket-takers td:first-child,
+.player-of-the-tournament td:first-child {
+    font-weight: bold;
+}
+
+.points-table td:last-child,
+.leading-run-scorers td:last-child,
+.leading-wicket-takers td:last-child,
+.player-of-the-tournament td:last-child {
+    text-align: right;
+}
+
+.picture1
+ {
+    position: absolute;
+    right: 20px;
+    width: 480px;
+    height: 400px;
+    align-items: flex-end;
+    top: 930px;
+}
+    
+
+
+.picture2
+{
+    position: absolute;
+    right: 20px;
+    top: 300px;
+    width: 480px;
+    height: 500px;
+    align-items: flex-end;
+}
+
+.picture3{
+    position: absolute;
+    right: 20px;
+    top: 1450px;
+    width: 480px;
+    height: 400px;
+    align-items: flex-end;
+}
+
+footer {
+            background-color: black;
+  color: #ffffff;
+  padding: 20px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  max-width: 1479px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+  }
+
+ .social-media a {
+    margin: 0 10px;
+  }
+
+  .social-media img {
+    width: 30px;
+    height: auto;
+  }
+
+  body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+
+        .content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.png" alt="Cricket Tournament Logo">
+            <h1 style="font-family:verdana"><i>CrickCorner</i></h1>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="stats.html">Stats</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="stats">
+                <h3 align="center">Points Table</h3>
+                <div class="points-table">
+                    <table>
+                        <tr>
+                            <th>Team</th>
+                            <th>Played</th>
+                            <th>Won</th>
+                            <th>Lost</th>
+                            <th>Tied</th>
+                            <th>N/R</th>
+                            <th>Points</th>
+                            <th>NRR</th>
+                        </tr>
+                        <tr>
+                            <td>Team F</td>
+                            <td>10</td>
+                            <td>8</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>16</td>
+                            <td>+1.25</td>
+                        </tr>
+                        <tr>
+                            <td>Team D</td>
+                            <td>10</td>
+                            <td>7</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>14</td>
+                            <td>+0.75</td>
+                        </tr>
+                        <tr>
+                            <td>Team H</td>
+                            <td>10</td>
+                            <td>6</td>
+                            <td>4</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>12</td>
+                            <td>+0.50</td>
+                        </tr>
+                        <tr>
+                            <td>Team A</td>
+                            <td>10</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>10</td>
+                            <td>+0.25</td>
+                        </tr>
+                        <tr>
+                            <td>Team B</td>
+                            <td>10</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>10</td>
+                            <td>-0.25</td>
+                        </tr>
+                        <tr>
+                            <td>Team E</td>
+                            <td>10</td>
+                            <td>4</td>
+                            <td>6</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>8</td>
+                            <td>-0.50</td>
+                        </tr>
+                        <tr>
+                            <td>Team G</td>
+                            <td>10</td>
+                            <td>3</td>
+                            <td>7</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>6</td>
+                            <td>-0.75</td>
+                        </tr>
+                        <tr>
+                            <td>Team C</td>
+                            <td>10</td>
+                            <td>2</td>
+                            <td>8</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>4</td>
+                            <td>-1.25</td>
+                        </tr>
+                    </table>
+                </div>
+                <img src="best_team.jpeg" alt="best_team" class="picture2">
+                <h3 align="center">Leading Run-Scorers</h3>
+                <div class="leading-run-scorers">
+                    <table>
+                        <tr>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Matches</th>
+                            <th>Innings</th>
+                            <th>Runs</th>
+                            <th>Average</th>
+                            <th>Strike Rate</th>
+                            <th>100s</th>
+                            <th>50s</th>
+                        </tr>
+                        <tr>
+                            <td>F1</td>
+                            <td>Team F</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>450</td>
+                            <td>50.00</td>
+                            <td>150.00</td>
+                            <td>1</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>D1</td>
+                            <td>Team D</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>420</td>
+                            <td>46.67</td>
+                            <td>140.00</td>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>H1</td>
+                            <td>Team H</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>400</td>
+                            <td>44.44</td>
+                            <td>133.33</td>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>A1</td>
+                            <td>Team A</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>380</td>
+                            <td>42.22</td>
+                            <td>126.67</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>B1</td>
+                            <td>Team B</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>360</td>
+                            <td>40.00</td>
+                            <td>120.00</td>
+                            <td>0</td>
+                            <td>3</td>
+                        </tr>
+                    </table>
+                </div>
+                <img src="run_scorer.jpeg" alt="top run scorer" class="picture1">
+                <h3 align="center">Leading Wicket-Takers</h3>
+                <div class="leading-wicket-takers">
+                    <table>
+                        <tr>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Matches</th>
+                            <th>Innings</th>
+                            <th>Wickets</th>
+                            <th>Average</th
+
+>
+                            <th>Economy</th>
+                            <th>Strike Rate</th>
+                            <th>4w</th>
+                            <th>5w</th>
+                        </tr>
+                        <tr>
+                            <td>F2</td>
+                            <td>Team F</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>20</td>
+                            <td>15.00</td>
+                            <td>6.00</td>
+                            <td>15.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>D2</td>
+                            <td>Team D</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>18</td>
+                            <td>16.67</td>
+                            <td>6.67</td>
+                            <td>15.00</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>H2</td>
+                            <td>Team H</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>16</td>
+                            <td>18.75</td>
+                            <td>7.50</td>
+                            <td>15.00</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>A2</td>
+                            <td>Team A</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>14</td>
+                            <td>21.43</td>
+                            <td>8.57</td>
+                            <td>15.00</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>B2</td>
+                            <td>Team B</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>12</td>
+                            <td>25.00</td>
+                            <td>10.00</td>
+                            <td>15.00</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                </div>
+                <img src="wicket_taker.jpeg" alt="top wicket taker" class="picture3">
+                <div class="player-of-the-tournament">
+                    <h3 align="center">Player of the Tournament</h3>
+                    <img src="pott.jpg" alt="F1 Photo" width="100">
+                    <p>Name: F1</p>
+                    <p>Team: Team F</p>
+                    <p>Performance: 450 runs at 50.00 average and 150.00 strike rate, 1 century and 3 half-centuries</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <p>© 2024 crickcorner.com Cricket Networks Limited. All rights reserved</p>
+        <p><a href="mailto:crickcorner@info.com">crickcorner@info.com</a></p>
+        <div class="social-media">
+          <a href="https://www.facebook.com/" target="_blank"><img src="facebook-logo.png" alt="Facebook Logo"></a>
+          <a href="https://www.twitter.com/" target="_blank"><img src="twitter-logo.png" alt="Twitter Logo"></a>
+          <a href="https://www.instagram.com/cricbuzzofficial/" target="_blank"><img src="instagram-logo.png" alt="Instagram Logo"></a>
+        </div>
+      </footer>
+</body>
+</html>
